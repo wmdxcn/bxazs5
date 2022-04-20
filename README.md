@@ -11,10 +11,10 @@
 默认所有公网ip自动分流
 
 <h2>5ip执行</h2>
-wget -q -N --no-check-certificate https://github.com/wmdxcn/bxazs5/blob/main/5.sh && bash 5.sh
+wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs5/main/5.sh && bash 5.sh
 
 <h2>10ip执行</h2>
-wget -q -N --no-check-certificate https://github.com/wmdxcn/bxazs5/blob/main/10.sh && bash 10.sh
+wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs5/main/10.sh && bash 10.sh
 
 <h2>其他命令</h2>
 
