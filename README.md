@@ -15,3 +15,19 @@ wget -q -N --no-check-certificate https://github.com/wmdxcn/bxazs5/blob/main/5.s
 
 <h2>10ip执行</h2>
 wget -q -N --no-check-certificate https://github.com/wmdxcn/bxazs5/blob/main/10.sh && bash 10.sh
+
+<h2>其他命令</h2>
+
+启动 /etc/init.d/sockd start
+
+停止 /etc/init.d/sockd stop
+
+重启 /etc/init.d/sockd restart
+
+重载 /etc/init.d/sockd reload
+
+状态 /etc/init.d/sockd state
+
+添加用户 /etc/init.d/sockd adduser $USERNAME $PASSWORD
+
+删除用户 /etc/init.d/sockd deluser $USERNAME
