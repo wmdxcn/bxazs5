@@ -31,3 +31,6 @@ wget -q -N --no-check-certificate https://github.com/wmdxcn/bxazs5/blob/main/10.
 添加用户 /etc/init.d/sockd adduser $USERNAME $PASSWORD
 
 删除用户 /etc/init.d/sockd deluser $USERNAME
+
+<h2>卸载</h2>
+bash install.sh --uninstall
