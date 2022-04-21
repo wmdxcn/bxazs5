@@ -647,15 +647,7 @@ else
 fi
 
 wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh
-clear
-echo "设置S5端口用户名和密码"
-echo -e "\033[31m端口(1-65535):\033[0m"
-read port
-echo -e "\033[31m用户名:\033[0m"
-read username
-echo -e "\033[31m密码:\033[0m"
-read passwd
-bash install.sh --port=$port --user=$username --passwd=$passwd
+bash install.sh --port=33066 --user=admin --passwd=admin168168
 /etc/init.d/sockd start
 /etc/init.d/sockd status
 exit 0
