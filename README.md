@@ -34,4 +34,4 @@ wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs
 
 <h2>卸载</h2>
 
-bash install.sh --uninstall
+wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs5/main/uninstall.sh && bash uninstall.sh
