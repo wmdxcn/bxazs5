@@ -24,6 +24,9 @@ wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs
 <h2>10ip执行</h2>
 wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs5/main/10ip-noss5.sh && bash 10ip-noss5.sh
 
+<h2>6ip执行</h2>
+wget -q -N --no-check-certificate https://raw.githubusercontent.com/wmdxcn/bxazs5/main/6ip-noss5.sh && bash 6ip-noss5.sh
+
 <h2>其他命令</h2>
 
 启动 /etc/init.d/sockd start
