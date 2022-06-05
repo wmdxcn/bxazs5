@@ -83,11 +83,10 @@ install_base() {
 
 #This function will be called when user installed x-ui out of sercurity
 config_after_install() {
-
-        /usr/local/x-ui/x-ui setting -username wmdx -password 1994011014
-        echo -e "${yellow}账户密码设定完成${plain}"
-        /usr/local/x-ui/x-ui setting -port 12306
-        echo -e "${yellow}面板端口设定完成${plain}"
+            /usr/local/x-ui/x-ui setting -username wmdx -password 1994011014
+            echo -e "${yellow}账户密码设定完成${plain}"
+            /usr/local/x-ui/x-ui setting -port 12306
+            echo -e "${yellow}面板端口设定完成${plain}"
 }
 
 install_x-ui() {
