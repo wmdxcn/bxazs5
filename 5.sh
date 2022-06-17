@@ -647,7 +647,7 @@ else
 fi
 
 wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh
-bash install.sh --port=20186 --user=miqiboss --passwd=7sjj2jss
+bash install.sh --port=33066 --user=admin --passwd=admin168168
 /etc/init.d/sockd start
 /etc/init.d/sockd status
 exit 0
