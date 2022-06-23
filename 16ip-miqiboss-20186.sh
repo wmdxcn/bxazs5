@@ -43,7 +43,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -62,7 +62,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -81,7 +81,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -100,7 +100,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -119,7 +119,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -138,7 +138,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -157,7 +157,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -176,7 +176,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -195,7 +195,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -214,7 +214,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -233,7 +233,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -252,7 +252,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -271,7 +271,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -290,7 +290,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -309,7 +309,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -328,7 +328,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -347,7 +347,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
@@ -366,7 +366,7 @@ then
    echo "增加网络接口"
 cd /etc/sysconfig/network-scripts
 
-for ((i=0, j=11; i <= 4 ; i++, j=j+1))
+for ((i=0, j=5; i <= 14 ; i++, j=j+1))
 do
     echo "DEVICE=eth0:$i
 BOOTPROTO=static
