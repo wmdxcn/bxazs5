@@ -310,6 +310,7 @@ install_kernel() {
 
 reboot_os() {
     echo"请手动重启系统"
+    exit 0
     
 }
 
