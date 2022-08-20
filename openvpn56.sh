@@ -45,6 +45,12 @@ systemctl start docker
 systemctl enable docker
 docker version
 
+echo "配置及启动"
+cd /
+mkdir openvpn
+cd openvpn
+mkdir config
+wget https://github.com/wmdxcn/bxazs5/raw/main/docker-compose.yml
 curl -L https://get.daocloud.io/docker/compose/releases/download/1.12.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
@@ -52,13 +58,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 gpasswd -a $USER docker
 #更新用户组
 newgrp docker
-
-echo "配置及启动"
-cd /
-mkdir openvpn
-cd openvpn
-mkdir config
-wget https://github.com/wmdxcn/bxazs5/raw/main/docker-compose.yml
 docker-compose up -d
 
 echo "防火墙配置"
