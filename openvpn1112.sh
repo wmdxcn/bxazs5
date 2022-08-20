@@ -57,7 +57,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo "将当前用户加入docker组中"
 gpasswd -a $USER docker
 echo "更新用户组"
-newgrp docker
 docker-compose up -d
 
 echo "防火墙配置"
