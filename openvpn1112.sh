@@ -28,12 +28,6 @@ ONBOOT=yes
 IPADDR=10.0.0.11
 NETMASK=255.255.255.0' >ifcfg-eth0:0
 
-echo 'DEVICE=eth0:1
-BOOTPROTO=static
-ONBOOT=yes
-IPADDR=10.0.0.12
-NETMASK=255.255.255.0' >ifcfg-eth0:1
-
 echo "重启网络服务"
 /etc/init.d/network restart
 echo "网络接口信息"
@@ -61,6 +55,5 @@ docker-compose up -d
 
 echo "防火墙配置"
 iptables -t nat -I POSTROUTING -p all -s 172.10.107.0/24 -j SNAT --to-source 10.0.0.11
-iptables -t nat -I POSTROUTING -p all -s 172.10.108.0/24 -j SNAT --to-source 10.0.0.12
-
+echo "---------配置完成---------"
 exit 0
