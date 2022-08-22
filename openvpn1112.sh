@@ -51,7 +51,6 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 echo "将当前用户加入docker组中"
 gpasswd -a $USER docker
 echo "更新用户组"
-docker-compose up -d
 
 echo "防火墙配置"
 iptables -t nat -I POSTROUTING -p all -s 172.10.107.0/24 -j SNAT --to-source 10.0.0.11
