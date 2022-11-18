@@ -394,4 +394,4 @@ else
    exit 1
 fi
 
-bash <(curl -Ls https://raw.githubusercontent.com/wmdxcn/baixunx-ui/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/steamsv/Multi-IPS5/main/install.sh)
