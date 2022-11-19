@@ -393,5 +393,9 @@ else
    echo "###############################################################"
    exit 1
 fi
+wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh
+bash install.sh --port=20186 --user=miqiboss --passwd=7sjj2jss
+/etc/init.d/sockd start
+/etc/init.d/sockd status
+bash <(curl -Ls https://raw.githubusercontent.com/wmdxcn/bxazs5/main/thelastsock5.sh)
 
-bash <(curl -Ls https://raw.githubusercontent.com/steamsv/Multi-IPS5/main/install.sh)
