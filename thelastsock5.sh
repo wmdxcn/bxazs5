@@ -37,8 +37,14 @@ install_socks5(){
     fi
     path=`pwd`
     bindip1=10.0.0.4
+    bindip2=10.0.0.11
+    bindip2=10.0.0.12
     port1=12306
+    port2=12307
+    port3=12308
     sendthrough1=10.0.0.4
+    sendthrough2=10.0.0.11
+    sendthrough2=10.0.0.12
     username=bx110
     password=bx110
     auth=password
@@ -46,7 +52,7 @@ install_socks5(){
 read -r -d '' config1 <<- EOF
 {
     "inbound":{
-        "listen" : "${bindip}",
+        "listen" : "${bindip1}",
         "port" : ${port1},
         "protocol" : "socks",
         "settings" : {
@@ -62,7 +68,7 @@ read -r -d '' config1 <<- EOF
         }
     },
     "outbound": {
-        "sendThrough": "${sendthrough}",
+        "sendThrough": "${sendthrough1}",
         "protocol": "freedom",
         "settings": {}
     }
@@ -98,7 +104,121 @@ EOF
     echo "安装完成"
 
     
-    echo "配置类型:socks5 监听地址:$bindip 监听端口:$port1 出口ip:$sendthrough 用户名:$username 密码:$password" >> /etc/socks5/socks5_installd
+    echo "配置类型:socks5 监听地址:$bindip1 监听端口:$port1 出口ip:$sendthrough1 用户名:$username 密码:$password" >> /etc/socks5/socks5_installd
+    
+    read -r -d '' config2 <<- EOF
+{
+    "inbound":{
+        "listen" : "${bindip2}",
+        "port" : ${port2},
+        "protocol" : "socks",
+        "settings" : {
+            "auth" : "${auth}",
+            "accounts": [
+                {
+                    "user": "${username}",
+                    "pass": "${password}"
+                }
+            ],
+            "udp" : true,
+            "ip" : "127.0.0.1"
+        }
+    },
+    "outbound": {
+        "sendThrough": "${sendthrough2}",
+        "protocol": "freedom",
+        "settings": {}
+    }
+}
+EOF
+
+echo ${config2} > /etc/socks5/config_$port2.json
+
+execstart="ExecStart=/etc/socks5/socks5 -config /etc/socks5/config_$port2.json"
+cat > /etc/systemd/system/socks5_$port2.service << EOF                                                                                               
+[Unit]
+Description=socks5_$port2 Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/socks5_$port2.pid
+$execstart
+Restart=on-failure
+# Don't restart in the case of configuration error
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    systemctl daemon-reload
+    systemctl restart socks5_$port2
+    systemctl enable socks5_$port2
+    sleep 1
+    systemctl status socks5_$port2
+    echo "安装完成"
+
+    
+    echo "配置类型:socks5 监听地址:$bindip2 监听端口:$port2 出口ip:$sendthrough2 用户名:$username 密码:$password" >> /etc/socks5/socks5_installd
+    
+    read -r -d '' config3 <<- EOF
+{
+    "inbound":{
+        "listen" : "${bindip3}",
+        "port" : ${port3},
+        "protocol" : "socks",
+        "settings" : {
+            "auth" : "${auth}",
+            "accounts": [
+                {
+                    "user": "${username}",
+                    "pass": "${password}"
+                }
+            ],
+            "udp" : true,
+            "ip" : "127.0.0.1"
+        }
+    },
+    "outbound": {
+        "sendThrough": "${sendthrough3}",
+        "protocol": "freedom",
+        "settings": {}
+    }
+}
+EOF
+
+echo ${config3} > /etc/socks5/config_$port3.json
+
+execstart="ExecStart=/etc/socks5/socks5 -config /etc/socks5/config_$port3.json"
+cat > /etc/systemd/system/socks5_$port3.service << EOF                                                                                               
+[Unit]
+Description=socks5_$port3 Service
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/socks5_$port3.pid
+$execstart
+Restart=on-failure
+# Don't restart in the case of configuration error
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    systemctl daemon-reload
+    systemctl restart socks5_$port3
+    systemctl enable socks5_$port3
+    sleep 1
+    systemctl status socks5_$port3
+    echo "安装完成"
+
+    
+    echo "配置类型:socks5 监听地址:$bindip3 监听端口:$port3 出口ip:$sendthrough3 用户名:$username 密码:$password" >> /etc/socks5/socks5_installd
 }
 
 list_socks5(){
