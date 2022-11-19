@@ -38,13 +38,13 @@ install_socks5(){
     path=`pwd`
     bindip1=10.0.0.4
     bindip2=10.0.0.11
-    bindip2=10.0.0.12
+    bindip3=10.0.0.12
     port1=12306
     port2=12307
     port3=12308
     sendthrough1=10.0.0.4
     sendthrough2=10.0.0.11
-    sendthrough2=10.0.0.12
+    sendthrough3=10.0.0.12
     username=bx110
     password=bx110
     auth=password
