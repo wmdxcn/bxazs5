@@ -36,14 +36,14 @@ install_socks5(){
         chmod +x /etc/socks5/socks5
     fi
     path=`pwd`
-    bindip=10.0.0.4
-    port1=20186
-    sendthrough=10.0.0.4
-    username=miqiboss
-    password=7sjj2jss
+    bindip1=10.0.0.4
+    port1=12306
+    sendthrough1=10.0.0.4
+    username=bx110
+    password=bx110
     auth=password
 
-read -r -d '' config <<- EOF
+read -r -d '' config1 <<- EOF
 {
     "inbound":{
         "listen" : "${bindip}",
@@ -69,7 +69,7 @@ read -r -d '' config <<- EOF
 }
 EOF
 
-echo ${config} > /etc/socks5/config_$port1.json
+echo ${config1} > /etc/socks5/config_$port1.json
 
 execstart="ExecStart=/etc/socks5/socks5 -config /etc/socks5/config_$port1.json"
 cat > /etc/systemd/system/socks5_$port1.service << EOF                                                                                               
