@@ -19,7 +19,7 @@ if [ $(whoami) != "root" ];then
 fi
 
 wget --no-check-certificate https://raw.github.com/Lozy/danted/master/install.sh -O install.sh
-bash install.sh --port=32106 --user=bx110 --passwd=bx110
+bash install.sh --port=12306 --user=admin --passwd=admin
 /etc/init.d/sockd start
 /etc/init.d/sockd status
 exit 0
